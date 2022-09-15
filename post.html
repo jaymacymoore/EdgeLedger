@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Post One</title>
+</head>
+<body id="home">
+  <header class="hero blog">
+    <div id="navbar" class="navbar top">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span>Ledger
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#cases">Cases</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content">
+      <h1>Blog</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="post max-width">
+      <section class="flexbox-test">
+      <h2>Blog Post One</h2>
+      <p class="meta">
+        <i class="fas fa-user"></i> Posted by <strong>Steve Smith</strong> | December 28, 2021
+      </p>
+     </section>
+      <img src="./image_resources/blog/blog1.jpg" alt="Blog One">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus perspiciatis quod qui fugit pariatur minus quam modi similique incidunt iure omnis reiciendis sequi exercitationem, blanditiis tempora, perferendis ducimus voluptatem debitis!</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi numquam repellendus rem explicabo neque eos adipisci voluptate harum aliquam rerum magnam dignissimos, reiciendis inventore ipsam nesciunt laborum quod. Voluptatum, optio repellendus voluptatem eligendi assumenda incidunt amet aut fugiat? Blanditiis, eveniet. At officia amet distinctio necessitatibus adipisci ipsam possimus qui, quo corporis dolor! Iste optio, voluptatibus omnis quidem a nostrum obcaecati?</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad dicta explicabo fuga nesciunt commodi inventore dignissimos molestias cum corporis distinctio! Sit consequuntur ipsa at? Excepturi provident perferendis rerum soluta? Voluptatibus illo, et enim consequuntur vel modi sed iusto dolorum corporis, maxime rerum ducimus quis fuga voluptatem mollitia incidunt quod sapiente!</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>Copyright &copy: 2021 - EdgeLedger</p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+      let scrolled = false;
+
+      window.onscroll = function(){
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove('top');
+          if(!scrolled) {
+            navbar.style.transform = 'translateY(-70px)';
+          }
+          setTimeout(function() {
+            navbar.style.transform = 'translateY(0)';
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add('top');
+          scrolled = false;
+        }
+      }
+  </script>
+</body>
+</html>
